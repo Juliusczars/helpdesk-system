@@ -235,7 +235,8 @@ CREATE TABLE `s_ticket` (
   `Department` varchar(50) NOT NULL,
   `Location` varchar(50) NOT NULL,
   `Status` varchar(50) NOT NULL,
-  `Timecreated` timestamp(6) NOT NULL DEFAULT '0000-00-00 00:00:00.000000' ON UPDATE CURRENT_TIMESTAMP
+  `Timecreated` timestamp(6) NOT NULL DEFAULT '0000-00-00 00:00:00.000000' ON UPDATE CURRENT_TIMESTAMP,
+  `Createdby` varchar(50) NOT NULL
 ) ;
 
 --
@@ -304,7 +305,7 @@ CREATE TABLE `w_task` (
   `Solution` varchar(50) NOT NULL,
   `Repairer` varchar(50) NOT NULL,
   `createdby` varchar(50) NOT NULL
-  `
+  
 ) ;
 
 --
