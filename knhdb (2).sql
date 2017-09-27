@@ -334,7 +334,8 @@ CREATE TABLE `w_ticket` (
   `Info` varchar(50) DEFAULT NULL,
   `Location` varchar(50) NOT NULL,
   `Status` varchar(100) NOT NULL,
-  `Time` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `Time` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Createdby` varchar(50) NOT NULL
 ) ;
 
 --
