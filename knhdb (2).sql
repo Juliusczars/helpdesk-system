@@ -107,7 +107,8 @@ CREATE TABLE `ordering` (
   `Reason` varchar(100) NOT NULL,
   `Status` varchar(50) NOT NULL,
   `procurement` varchar(50) NOT NULL,
-  `Createdon` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `Createdon` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Orderedby` varchar(50) NOT NULL
 ) ;
 
 --
