@@ -203,7 +203,7 @@ INSERT INTO `p_dispatch` (`SN`, `P_no`, `Description`, `Ddate`, `Serialno`, `Dep
 CREATE TABLE `s_task` (
   `Ticket_no` int(10) NOT NULL,
   `TimeA` timestamp(6) NOT NULL DEFAULT '0000-00-00 00:00:00.000000' ON UPDATE CURRENT_TIMESTAMP,
-  `Cdate` date(60) NOT NULL,
+  `Cdate` date NOT NULL,
   `Officer` varchar(50) NOT NULL,
   `Solution` varchar(50) NOT NULL,
   `TimeClosed` date(6) NOT NULL,
@@ -300,7 +300,7 @@ INSERT INTO `usersii` (`P_no`, `Username`, `Email`, `Password`) VALUES
 CREATE TABLE `w_task` (
   `Ticket_no` int(10) NOT NULL,
   `Time` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Cdate` date(60) NOT NULL,
+  `Cdate` date NOT NULL,
   `Solution` varchar(50) NOT NULL,
   `Repairer` varchar(50) NOT NULL,
   `createdby` varchar(50) NOT NULL
