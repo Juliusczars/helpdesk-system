@@ -201,7 +201,12 @@ INSERT INTO `p_dispatch` (`SN`, `P_no`, `Description`, `Ddate`, `Serialno`, `Dep
 
 CREATE TABLE `s_task` (
   `Ticket_no` int(10) NOT NULL,
-  `TimeA` timestamp(6) NOT NULL DEFAULT '0000-00-00 00:00:00.000000' ON UPDATE CURRENT_TIMESTAMP
+  `TimeA` timestamp(6) NOT NULL DEFAULT '0000-00-00 00:00:00.000000' ON UPDATE CURRENT_TIMESTAMP,
+  `Cdate` date(60) NOT NULL,
+  `Officer` varchar(50) NOT NULL,
+  `Solution` varchar(50) NOT NULL,
+  `TimeClosed` date(6) NOT NULL,
+  `createdby` varchar(50) NOT NULL
 ) ;
 
 --
@@ -293,7 +298,12 @@ INSERT INTO `usersii` (`P_no`, `Username`, `Email`, `Password`) VALUES
 
 CREATE TABLE `w_task` (
   `Ticket_no` int(10) NOT NULL,
-  `Time` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `Time` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Cdate` date(60) NOT NULL,
+  `Solution` varchar(50) NOT NULL,
+  `Repairer` varchar(50) NOT NULL,
+  `createdby` varchar(50) NOT NULL
+  `
 ) ;
 
 --
@@ -303,7 +313,7 @@ CREATE TABLE `w_task` (
 INSERT INTO `w_task` (`Ticket_no`, `Time`, `Cdate`, `Solution`, `Repairer`, `Createdby`) VALUES
 (1, '2017-05-05 07:03:50.025062', '2017-04-29', 'HDD replaced', 'Tom', 'JaneDoe'),
 (2, '2017-05-13 08:55:27.126406', '2017-05-13', 'New keyboard given', 'Jmay', 'Tom'),
-(3, '2017-05-13 09:15:19.978339', '2017-05-13', 'UPS battery replaced\r\n', 'JaneDoe', 'Tom');
+(3, '2017-05-13 09:15:19.978339', '2017-05-13', 'UPS battery replaced', 'JaneDoe', 'Tom');
 
 -- --------------------------------------------------------
 
