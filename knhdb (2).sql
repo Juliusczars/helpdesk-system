@@ -206,7 +206,7 @@ CREATE TABLE `s_task` (
   `Cdate` date NOT NULL,
   `Officer` varchar(50) NOT NULL,
   `Solution` varchar(50) NOT NULL,
-  `TimeClosed` date(6) NOT NULL,
+  `TimeClosed` date NOT NULL,
   `createdby` varchar(50) NOT NULL
 ) ;
 
